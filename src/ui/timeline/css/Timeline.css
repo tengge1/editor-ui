@@ -1,0 +1,127 @@
+.Timeline {
+    width: 100%;
+    height: 160px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Timeline>.controls>.IconButton {
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin: 0 6px;
+    padding: 0;
+}
+
+.Timeline>.controls>.IconButton>.iconfont {
+    font-size: 18px;
+}
+
+.Timeline>.controls>.ToolbarSeparator {
+    margin: 0 8px;
+}
+
+.Timeline>.box {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.Timeline>.box>.timeline {
+    position: relative;
+    height: 32px;
+    overflow: hidden;
+}
+
+.Timeline>.box>.timeline>.mask {
+    position: absolute;
+    width: 100px;
+    height: 32px;
+    background: #fff;
+    z-index: 10;
+}
+
+.Timeline>.box>.timeline>canvas {
+    position: absolute;
+    left: 100px;
+}
+
+.Timeline>.box>.layers {
+    border-top: 1px solid #ddd;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: stretch;
+    overflow-y: auto;
+}
+
+.Timeline>.box>.layers>.left {
+    width: 100px;
+    height: 100%;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.Timeline>.box>.layers>.left>.info {
+    height: 29px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.Timeline>.box>.layers>.right {
+    position: relative;
+    width: 0;
+    height: 100%;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+    flex: 1;
+    overflow: auto;
+}
+
+.Timeline>.box>.layers>.right>.layer {
+    position: relative;
+    width: 3600px;
+    height: 29px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.Timeline>.box>.layers>.right>.layer>.animation {
+    position: absolute;
+    font-size: 12px;
+    line-height: 28px;
+    color: #fff;
+    background: #1296db;
+    padding: 0 4px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.Timeline>.box>.layers>.right>.layer>.animation.selected {
+    background: #d4237a;
+}
+
+.Timeline>.box>.layers>.slider {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
